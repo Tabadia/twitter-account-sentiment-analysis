@@ -1,0 +1,4 @@
+colorama==0.4.4
+nltk==3.7
+tweepy==4.10.1
+python-dotenv==0.20.0
