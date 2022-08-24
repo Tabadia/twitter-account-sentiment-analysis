@@ -1,10 +1,13 @@
 # IMPORTS
 import nltk
-from colorama import Fore, Style
+from colorama import init, Fore, Style
 from nltk.sentiment import SentimentIntensityAnalyzer
 import tweepy
 from dotenv import load_dotenv
 import os
+
+init()
+os.system("cls" or "clear")
 
 def configure():
     load_dotenv()
@@ -57,3 +60,5 @@ pos = pos/total
 neg = neg/total
 print(Fore.BLUE)
 print(f"Positive: {round(pos*100,2)}% \nNegative: {round(neg*100,2)}% \nNeutral: {round(neu*100,2)}%")
+
+input("\n\n\nPress enter to exit...")
