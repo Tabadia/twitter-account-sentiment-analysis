@@ -58,5 +58,6 @@ neg = neg/total
 print(Fore.BLUE)
 print(f"Positive: {round(pos*100,2)}% \nNegative: {round(neg*100,2)}% \nNeutral: {round(neu*100,2)}%")
 
-input("\n\n\nPress esc to exit...")
-time.sleep(10)
+print(Fore.WHITE)
+input("\n\nPress esc to exit...")
+time.sleep(1)
