@@ -16,17 +16,20 @@ pip install -r requirements.txt
 
 ### Twitter API
 
-- Create a new file named ```.env```
+- Create a new text file
 - Go to https://developer.twitter.com/ and create an account
 - Create a new app
 - Find the API keys
-- Add this to the .env file:
+- Add this to the text file:
+
 ```
 key1 = 'consumer_token'
 key2 = 'consumer_secret'
 key3 = 'access_token'
 key4 = 'access_secret
 ```
+
+- Rename the file to `.env`
 
 Open main.py
 
