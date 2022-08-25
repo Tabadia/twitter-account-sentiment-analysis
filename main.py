@@ -59,5 +59,5 @@ print(Fore.BLUE)
 print(f"Positive: {round(pos*100,2)}% \nNegative: {round(neg*100,2)}% \nNeutral: {round(neu*100,2)}%")
 
 print(Fore.WHITE)
-input("\n\nPress esc to exit...")
+input("\n\nPress enter to exit...")
 time.sleep(1)
