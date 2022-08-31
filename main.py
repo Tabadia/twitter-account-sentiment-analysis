@@ -25,9 +25,11 @@ auth = tweepy.OAuthHandler(os.getenv('key1'), os.getenv('key2'))
 auth.set_access_token(os.getenv('key3'), os.getenv('key4'))
 api = tweepy.API(auth, wait_on_rate_limit=True)
 tweets_list = []
-for tweet in tweepy.Cursor(api.user_timeline, screen_name=username, count=None, tweet_mode='extended', exclude_replies=True, include_rts=False).items(500):
-  tweets_list.append(tweet)
-
+try:
+  for tweet in tweepy.Cursor(api.user_timeline, screen_name=username, count=None, tweet_mode='extended', exclude_replies=True, include_rts=False).items(500):
+    tweets_list.append(tweet)
+except Exception:
+  print("Error: Incorrect API Keys. \nRead README.md for more help")
 # SENTIMENT ANALYSIS
 print(Fore.BLUE)
 print("Calculating...")
@@ -59,5 +61,6 @@ print(Fore.BLUE)
 print(f"Positive: {round(pos*100,2)}% \nNegative: {round(neg*100,2)}% \nNeutral: {round(neu*100,2)}%")
 
 print(Fore.WHITE)
-input("\n\nPress enter to exit...")
+input("\nPress enter to exit...")
+print("Exiting...")
 time.sleep(1)
